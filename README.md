@@ -4,4 +4,4 @@ A Unity project that teaches penguins to swim around, find fish within the envir
 
 The penguin was trained with reinforcement learning to make decisions and swim around.
 
-You can find the [demo]() here!
+You can find the [demo](https://www.youtube.com/watch?v=91TM5UHDzzU) here!
