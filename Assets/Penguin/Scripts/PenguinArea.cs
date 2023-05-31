@@ -75,6 +75,8 @@ public class PenguinArea : MonoBehaviour
             }
         }
 
+        fishList.Clear();
+
         fishList = new List<GameObject>();
     }
 
@@ -124,6 +126,7 @@ public class PenguinArea : MonoBehaviour
     // When game starts
     private void Start()
     {
+        fishList = new List<GameObject>();
         ResetArea();
     }
 
