@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MLAgents;
+using Unity.MLAgentsExamples;
 using TMPro;
 
 public class PenguinArea : Area
@@ -14,10 +14,11 @@ public class PenguinArea : Area
     public TextMeshPro cumulativeRewardText;
     // Prefab of a live fish
     public Fish fishPrefab;
+
     private List<GameObject> fishList;
 
     // Reset the area which includes the fish and penguin placement
-    public void ResetArea()
+    public override void ResetArea()
     {
         // Make sure no fish are in the area before spawning new fish
         RemoveAllFish();
