@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.MLAgentsExamples;
+using Unity.MLAgents;
 using TMPro;
 
-public class PenguinArea : Area
+public class PenguinArea : MonoBehaviour
 {
     // The agent inside the area
     public PenguinAgent penguinAgent;
@@ -18,7 +18,7 @@ public class PenguinArea : Area
     private List<GameObject> fishList;
 
     // Reset the area which includes the fish and penguin placement
-    public override void ResetArea()
+    public void ResetArea()
     {
         // Make sure no fish are in the area before spawning new fish
         RemoveAllFish();
