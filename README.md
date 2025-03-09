@@ -6,6 +6,6 @@ The penguin was trained with reinforcement learning to make decisions and swim a
 
 You can find the [demo](https://www.youtube.com/watch?v=91TM5UHDzzU) here!
 
-Navigate to `CondaEnvironment/` and create your respective conda environment by running:
+Navigate to `Setup/CondaEnvironment/` and create your respective conda environment by running:
 
-```conda env create -f environment_r20.yml```
+```conda env create -f environment.yml```
