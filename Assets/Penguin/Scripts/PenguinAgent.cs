@@ -57,7 +57,17 @@ public class PenguinAgent : Agent
         // Apply movement
         rigidbody.MovePosition(transform.position + transform.forward * forwardAmount * moveSpeed * Time.fixedDeltaTime);
         transform.Rotate(transform.up * turnAmount * turnSpeed * Time.fixedDeltaTime);
-
+        
+        // Add penalties for actions to encourage energy conservation.
+        if (forwardAmount > 0) {
+            //Debug.Log("Agent moved forward");
+            AddReward(-0.0002f); // Penalty for moving forward.
+        }
+        if (turnAmount != 0) {
+            //Debug.Log("Agent turned");
+            AddReward(-0.0002f); // Penalty for turning.
+        }
+        
         // Apply a tiny negative reward every step to encourage action
         if (MaxStep > 0) AddReward(-1f / MaxStep);
     }
@@ -136,7 +146,7 @@ public class PenguinAgent : Agent
 
         penguinArea.RemoveSpecificFish(fishObject);
 
-        AddReward(1f);
+        AddReward(1f); // Increase reward structure to encourage eating.
     }
 
     // Regurgitate fish and feed the baby if the agent is full
@@ -157,9 +167,12 @@ public class PenguinAgent : Agent
         heart.transform.position = baby.transform.position + Vector3.up;
         Destroy(heart, 4f);
 
-        AddReward(1f);
+        // Reward for feeding the baby.
+        AddReward(3f);
 
         if (penguinArea.FishRemaining <= 0) {
+            // Reward for finishing the episode.
+            //AddReward(2f);
             EndEpisode();
         }
     }
