@@ -9,3 +9,5 @@ You can find the [demo](https://www.youtube.com/watch?v=91TM5UHDzzU) here!
 Navigate to `Setup/CondaEnvironment/` and create your respective conda environment by running:
 
 ```conda env create -f environment.yml```
+
+Interested in reading the **paper**? Navigate to `AgentLearningLogs/Deliverables/`!
