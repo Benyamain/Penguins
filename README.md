@@ -1,4 +1,4 @@
-# Penguins
+# 🐧Penguins🐧
 
 A Unity project that teaches penguins to swim around, find fish within the environment, and bring the fish back to feed their babies!
 
